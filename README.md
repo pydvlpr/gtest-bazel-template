@@ -57,7 +57,15 @@ INFO: 9 processes: 1 internal, 8 darwin-sandbox.
 A better way to working with a workspace is to let Bazel find all available tests and rund them automatically before building.
 
 ```
-
+-> % bazel query //... | xargs bazel test --cxxopt='-std=c++14'
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+INFO: Analyzed 3 targets (0 packages loaded, 113 targets configured).
+INFO: Found 2 targets and 1 test target...
+INFO: Elapsed time: 0.120s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+//tests:test                                                    PASSED 
 ```
 
 ## Example of test run
