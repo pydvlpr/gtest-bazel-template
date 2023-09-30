@@ -74,7 +74,9 @@ It is possible to build and afterwards run a test program manually. But it is al
 
 ### Run specific tests on their own.
 
-After the build of the test program we are able to run the test cases.
+As written above it is possible to find an run all tests cases automatically.
+
+For an output in more detail one needs to run the specific test programm on its own.
 
 ```
 -> % bazel-bin/tests/test                           
@@ -90,23 +92,6 @@ After the build of the test program we are able to run the test cases.
 [----------] Global test environment tear-down
 [==========] 2 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 2 tests.
-```
-
-### Find all test in the workspace an run them
-
-```
--> % bazel test --cxxopt='-std=c++14' $(bazel query "//...")
-Loading: 0 packages loaded
-Loading: 1 packages loaded
-INFO: Build option --cxxopt has changed, discarding analysis cache.
-INFO: Analyzed 3 targets (0 packages loaded, 450 targets configured).
-INFO: Found 2 targets and 1 test target...
-INFO: Elapsed time: 1.674s, Critical Path: 1.51s
-INFO: 8 processes: 1 internal, 7 darwin-sandbox.
-INFO: Build completed successfully, 8 total actions
-//tests:test                                                             PASSED in 0.3s
-
-Executed 1 out of 1 test: 1 test passes.
 ```
 
 ## Further information
